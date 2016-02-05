@@ -26,7 +26,7 @@ func NewSassContext(cmd *SassCommand, inputPath string, outputPath string) *Sass
 }
 
 func (self *SassContext) AddPlugin(path string) {
-	plugin := pingo.NewPlugin("unix", path)
+	plugin := pingo.NewPlugin("tcp", path)
 	self.plugins = append(self.plugins, plugin)
 }
 
